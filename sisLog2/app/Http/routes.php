@@ -67,6 +67,10 @@ Route::group(['middleware' => 'usuarioTactico'], function () {
 	Route::resource('clinica/pago','PagoController');
 	Route::resource('clinica/receta','RecetaController');
     Route::resource('clinica/infoReceta','InforeceController');
+	Route::resource('clinica/ingresos','IngresoController');
+    
+    Route::resource('tactico/vehiculo','VehiculoController');
+    Route::resource('tactico/tecnico','TecnicoController');
 
 
 	Route::resource('tactico','IndiceController@index3');
