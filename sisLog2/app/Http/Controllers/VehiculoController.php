@@ -59,8 +59,8 @@ class VehiculoController extends Controller
     public function show()
     {
     	$anys = Session::get('anys');
-    	$pdf = PDF::loadView('tactico.vehiculo.vista',compact('anys'));
-        return $pdf->download('ejemplo.pdf');
+    	$pdf = PDF::loadView('tactico.vehiculo.vista2',compact('anys'));
+        return $pdf->download('Vehiculo.pdf');
       	
 
     }

@@ -1,86 +1,87 @@
+
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="utf-8"/>
-<title>Expediente de Paciente</title>
-<style type="text/css">
-hr {
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Reporte MERS</title>
+    
+    <style type="text/css">
+
+      hr {
           border-color: #66BDA9;
           height: 1px;
           margin: 5px 0;
           display: block;
           clear: both;
       }
-.Estilo11 {font-weight: bold}
-<!--
-body {
-	background-image: url();
-}
-.Estilo9 {color: 1}
-.Estilo10 {font-size: 9px}
-.Estilo11 {font-weight: bold}
--->
-</style></head>
 
-<body>
+      table {
+            border: #CC5A6A 1px solid;
+
+      }
+
+      th,tr,td{
+            border: #66BDA9 1px solid;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header class="clearfix">
+      <div id="logo">
+        <img src="..\public\img\MERS.png" width="100" height="100">
+      </div>
+      <h1 align="center"><font color="#66BDA9">Redes Moviles de El Salvador - Reporte de Existencia de Vehiculos con Desperfectos</font></h1>
+      
+      
+      <br><br><br><br>
 
 
-<h1 align="center"><font color="#66BDA9">Resporte de vehiculos defectuosos</font></h1>
-<hr>  
+    </header>
+    <main>
+      <table align="center" >
+        <thead>
+          <tr>
+            <th class="Irregularidad" bgcolor="#D0D3D4">Id Vehiculo</th>
+            <th class="Irregularidad" bgcolor="#D0D3D4">Marca Vehiculo</th>
+            <th class="Irregularidad" bgcolor="#D0D3D4">Tipo Desperfecto</th>
+            
+          </tr>
 
-<div align="left">
-<table width="540" height="230" border="0" bordercolor="#F0F0F0" bgcolor="white">
-<th height="42" background="
-" bgcolor="#FFFFFF" scope="col">
-<table width="540" height="230" border="0" align="center" bordercolor="#F0F0F0">
+        </thead>
+        <tbody>
+
+          
+
+
+
+
+            @foreach ($anys as $any)
+         <tbody>
           <tr>
-            <td colspan="5" bgcolor="skyblue" class="Estilo11">Expediente de Paciente</td>
-          </tr>
-          <tr>
-            <th class="Estilo9" scope="col"><div align="left">Apellido:</div></th>
-            <th class="Estilo9" scope="col"><div align="left">{{ $anys->IDVEHICULO }}</div></th>
-          </tr>
-          <tr>
-            <td class="Estilo9"><div align="left">Nombre:</div></td>
-            <td class="Estilo9"><div align="left"></div></td>
-          </tr>
-          <tr>
-            <td class="Estilo9"><div align="left">Telefono:</div></td>
-            <td class="Estilo9"><div align="left"></div></td>
-          </tr>
-          <tr>
-            <td class="Estilo9"><div align="left">Direccion:</div></td>
-            <td class="Estilo9"><div align="left"></div></td>
-          </tr>
-          <tr>
-            <td class="Estilo9"><div align="left">Fecha Nacimiento:</div></td>
-            <td class="Estilo9"><div align="left"></div></td>
-            </tr>
-          <tr>
-            <td class="Estilo9"><div align="left">Tipo de Sangre:</div></td>
-            <td class="Estilo9"><div align="left"></div></td>
-            </tr>
-          <tr>
-            <td class="Estilo9"><div align="left">Sexo:</div></td>
-            <td class="Estilo9"><div align="left"></div></td>
-            </tr>
-          <tr>
-            <td class="Estilo9"><div align="left">Estado Civil:</div></td>
-            <td class="Estilo9"><div align="left"></div></td>
-            </tr>
+         
+          
         
-          <tr>
-            <td colspan="5" bgcolor="skyblue" class="Estilo9">&nbsp;</td>
-          </tr>
-          </table>
-          </th>
-          </table>
-<p>{{$anys}}</p>
-          <hr>
+          
+            <td class="Irregularidad"><div align="left">{{ $any->IDVEHICULO }}</div></td>
+            <td class="Irregularidad"><div align="left">{{ $any->MARCAVEHICULO }} </div></td></td>
+            <td class="Irregularidad"><div align="left">{{ $any->TIPODESPERFECTO }}</div></td></td>
+           
+          
+         </tbody>
+        </tr>
+          </tbody>      
+  @endforeach
 
-          <footer>
-          <center>Clama a mi y yo te respondere Jeremias 33:3.</center>         
-          </footer>
-</div>
-</body>
+
+      </table>
+      
+    </main>
+    <footer>
+      <br><br>
+      <hr>
+      <br>
+      <center>Reporte de Apoyo para los tomadores de decision de nivel Tactico de la Empresa MERS</center>
+    </footer>
+  </body>
 </html>
